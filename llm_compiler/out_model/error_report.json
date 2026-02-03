@@ -1,0 +1,52 @@
+{
+  "spec": {
+    "name": "debug-2k-transformer",
+    "template": "decoder_only",
+    "vocab_size": 32,
+    "context_length": 16,
+    "num_layers": 1,
+    "hidden_size": 16,
+    "intermediate_size": 32,
+    "num_heads": 2,
+    "num_kv_heads": null,
+    "head_dim": null,
+    "target_params": null,
+    "explicit_dims": {
+      "num_layers": 1,
+      "hidden_size": 16,
+      "intermediate_size": 32,
+      "num_heads": 2
+    },
+    "target_tolerance": 0.1,
+    "attention": "gqa",
+    "norm": "rmsnorm",
+    "activation": "relu",
+    "positional_encoding": "rope",
+    "tokenizer": "unigram",
+    "weight_format": "safetensors",
+    "backend": "pytorch_training",
+    "rope_theta": 10000.0,
+    "rope_scaling_factor": null,
+    "alibi_max_bias": 8.0,
+    "sliding_window_size": null,
+    "tie_word_embeddings": true,
+    "tie_embeddings": true,
+    "gradient_checkpointing": false,
+    "precision": "float32",
+    "quantize": null,
+    "quantize_bits": 16,
+    "_validated": false
+  },
+  "steps": [
+    {
+      "step": "error",
+      "status": "failed",
+      "error": "Template not found: decoder_only. Available: ['decoder_only_v1', 'decoder_only_v2', 'encoder_decoder_v1']"
+    }
+  ],
+  "success": false,
+  "output_dir": "/Users/apple/alwork/llm_compiler/out_model",
+  "files": [],
+  "error": "Template not found: decoder_only. Available: ['decoder_only_v1', 'decoder_only_v2', 'encoder_decoder_v1']",
+  "error_type": "ValueError"
+}

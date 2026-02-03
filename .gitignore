@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+
+runs/
+llm_compiler/runs/
+llm_compiler/out_model/weights/
+
+.DS_Store
+

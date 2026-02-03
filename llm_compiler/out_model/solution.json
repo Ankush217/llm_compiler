@@ -1,0 +1,15 @@
+{
+  "dimensions": {
+    "hidden_size": 16,
+    "num_heads": 2,
+    "num_kv_heads": 1,
+    "intermediate_size": 32,
+    "num_layers": 1,
+    "total_params": 2976,
+    "None": 1,
+    "vocab_size": 32,
+    "context_length": 16,
+    "head_dim": 8
+  },
+  "parameters": 2976
+}

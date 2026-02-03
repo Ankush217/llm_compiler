@@ -1,0 +1,500 @@
+{
+  "name": "decoder_only_v1",
+  "tensors": {
+    "input_ids": {
+      "name": "input_ids",
+      "shape": [
+        -1,
+        16
+      ],
+      "dtype": "int32",
+      "node": null,
+      "consumers": [
+        "token_embeddings"
+      ]
+    },
+    "token_embeddings_out_1": {
+      "name": "token_embeddings_out_1",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "token_embeddings",
+      "consumers": [
+        "rope_positional"
+      ]
+    },
+    "rope_positional_out_2": {
+      "name": "rope_positional_out_2",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "rope_positional",
+      "consumers": [
+        "input_norm"
+      ]
+    },
+    "input_norm_out_3": {
+      "name": "input_norm_out_3",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "input_norm",
+      "consumers": [
+        "layer_0_attn_norm",
+        "layer_0_attn_residual"
+      ]
+    },
+    "layer_0_attn_norm_out_4": {
+      "name": "layer_0_attn_norm_out_4",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_attn_norm",
+      "consumers": [
+        "layer_0_q_proj",
+        "layer_0_k_proj",
+        "layer_0_v_proj"
+      ]
+    },
+    "layer_0_q_proj_out_5": {
+      "name": "layer_0_q_proj_out_5",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_q_proj",
+      "consumers": [
+        "layer_0_attn"
+      ]
+    },
+    "layer_0_k_proj_out_6": {
+      "name": "layer_0_k_proj_out_6",
+      "shape": [
+        -1,
+        -1,
+        8
+      ],
+      "dtype": "float32",
+      "node": "layer_0_k_proj",
+      "consumers": [
+        "layer_0_attn"
+      ]
+    },
+    "layer_0_v_proj_out_7": {
+      "name": "layer_0_v_proj_out_7",
+      "shape": [
+        -1,
+        -1,
+        8
+      ],
+      "dtype": "float32",
+      "node": "layer_0_v_proj",
+      "consumers": [
+        "layer_0_attn"
+      ]
+    },
+    "layer_0_attn_out_8": {
+      "name": "layer_0_attn_out_8",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_attn",
+      "consumers": [
+        "layer_0_attn_out_proj"
+      ]
+    },
+    "layer_0_attn_out_proj_out_9": {
+      "name": "layer_0_attn_out_proj_out_9",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_attn_out_proj",
+      "consumers": [
+        "layer_0_attn_residual"
+      ]
+    },
+    "layer_0_attn_residual_out_10": {
+      "name": "layer_0_attn_residual_out_10",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_attn_residual",
+      "consumers": [
+        "layer_0_mlp_norm",
+        "layer_0_mlp_residual"
+      ]
+    },
+    "layer_0_mlp_norm_out_11": {
+      "name": "layer_0_mlp_norm_out_11",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_mlp_norm",
+      "consumers": [
+        "layer_0_fc1"
+      ]
+    },
+    "layer_0_fc1_out_12": {
+      "name": "layer_0_fc1_out_12",
+      "shape": [
+        -1,
+        -1,
+        32
+      ],
+      "dtype": "float32",
+      "node": "layer_0_fc1",
+      "consumers": [
+        "layer_0_activation"
+      ]
+    },
+    "layer_0_activation_out_13": {
+      "name": "layer_0_activation_out_13",
+      "shape": [
+        -1,
+        -1,
+        32
+      ],
+      "dtype": "float32",
+      "node": "layer_0_activation",
+      "consumers": [
+        "layer_0_down_proj"
+      ]
+    },
+    "layer_0_down_proj_out_14": {
+      "name": "layer_0_down_proj_out_14",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_down_proj",
+      "consumers": [
+        "layer_0_mlp_residual"
+      ]
+    },
+    "layer_0_mlp_residual_out_15": {
+      "name": "layer_0_mlp_residual_out_15",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "layer_0_mlp_residual",
+      "consumers": [
+        "output_norm"
+      ]
+    },
+    "output_norm_out_16": {
+      "name": "output_norm_out_16",
+      "shape": [
+        -1,
+        -1,
+        16
+      ],
+      "dtype": "float32",
+      "node": "output_norm",
+      "consumers": [
+        "output_projection"
+      ]
+    },
+    "output_projection_out_17": {
+      "name": "output_projection_out_17",
+      "shape": [
+        -1,
+        -1,
+        32
+      ],
+      "dtype": "float32",
+      "node": "output_projection",
+      "consumers": []
+    }
+  },
+  "operations": {
+    "token_embeddings": {
+      "name": "token_embeddings",
+      "type": "embedding",
+      "inputs": [
+        "input_ids"
+      ],
+      "outputs": [
+        "token_embeddings_out_1"
+      ],
+      "attributes": {
+        "vocab_size": 32,
+        "embedding_dim": 16
+      }
+    },
+    "rope_positional": {
+      "name": "rope_positional",
+      "type": "rope",
+      "inputs": [
+        "token_embeddings_out_1"
+      ],
+      "outputs": [
+        "rope_positional_out_2"
+      ],
+      "attributes": {
+        "dim": 8,
+        "theta": 10000.0
+      }
+    },
+    "input_norm": {
+      "name": "input_norm",
+      "type": "rmsnorm",
+      "inputs": [
+        "rope_positional_out_2"
+      ],
+      "outputs": [
+        "input_norm_out_3"
+      ],
+      "attributes": {
+        "normalized_shape": 16,
+        "eps": 1e-06
+      }
+    },
+    "layer_0_attn_norm": {
+      "name": "layer_0_attn_norm",
+      "type": "rmsnorm",
+      "inputs": [
+        "input_norm_out_3"
+      ],
+      "outputs": [
+        "layer_0_attn_norm_out_4"
+      ],
+      "attributes": {
+        "normalized_shape": 16,
+        "eps": 1e-06
+      }
+    },
+    "layer_0_q_proj": {
+      "name": "layer_0_q_proj",
+      "type": "linear",
+      "inputs": [
+        "layer_0_attn_norm_out_4"
+      ],
+      "outputs": [
+        "layer_0_q_proj_out_5"
+      ],
+      "attributes": {
+        "in_features": 16,
+        "out_features": 16,
+        "use_bias": true,
+        "tie_weight": null
+      }
+    },
+    "layer_0_k_proj": {
+      "name": "layer_0_k_proj",
+      "type": "linear",
+      "inputs": [
+        "layer_0_attn_norm_out_4"
+      ],
+      "outputs": [
+        "layer_0_k_proj_out_6"
+      ],
+      "attributes": {
+        "in_features": 16,
+        "out_features": 8,
+        "use_bias": true,
+        "tie_weight": null
+      }
+    },
+    "layer_0_v_proj": {
+      "name": "layer_0_v_proj",
+      "type": "linear",
+      "inputs": [
+        "layer_0_attn_norm_out_4"
+      ],
+      "outputs": [
+        "layer_0_v_proj_out_7"
+      ],
+      "attributes": {
+        "in_features": 16,
+        "out_features": 8,
+        "use_bias": true,
+        "tie_weight": null
+      }
+    },
+    "layer_0_attn": {
+      "name": "layer_0_attn",
+      "type": "multi_head_attention",
+      "inputs": [
+        "layer_0_q_proj_out_5",
+        "layer_0_k_proj_out_6",
+        "layer_0_v_proj_out_7"
+      ],
+      "outputs": [
+        "layer_0_attn_out_8"
+      ],
+      "attributes": {
+        "num_heads": 2,
+        "num_kv_heads": 1,
+        "head_dim": 8,
+        "attention_type": "gqa",
+        "use_alibi": false
+      }
+    },
+    "layer_0_attn_out_proj": {
+      "name": "layer_0_attn_out_proj",
+      "type": "linear",
+      "inputs": [
+        "layer_0_attn_out_8"
+      ],
+      "outputs": [
+        "layer_0_attn_out_proj_out_9"
+      ],
+      "attributes": {
+        "in_features": 16,
+        "out_features": 16,
+        "use_bias": true,
+        "tie_weight": null
+      }
+    },
+    "layer_0_attn_residual": {
+      "name": "layer_0_attn_residual",
+      "type": "add",
+      "inputs": [
+        "input_norm_out_3",
+        "layer_0_attn_out_proj_out_9"
+      ],
+      "outputs": [
+        "layer_0_attn_residual_out_10"
+      ],
+      "attributes": {}
+    },
+    "layer_0_mlp_norm": {
+      "name": "layer_0_mlp_norm",
+      "type": "rmsnorm",
+      "inputs": [
+        "layer_0_attn_residual_out_10"
+      ],
+      "outputs": [
+        "layer_0_mlp_norm_out_11"
+      ],
+      "attributes": {
+        "normalized_shape": 16,
+        "eps": 1e-06
+      }
+    },
+    "layer_0_fc1": {
+      "name": "layer_0_fc1",
+      "type": "linear",
+      "inputs": [
+        "layer_0_mlp_norm_out_11"
+      ],
+      "outputs": [
+        "layer_0_fc1_out_12"
+      ],
+      "attributes": {
+        "in_features": 16,
+        "out_features": 32,
+        "use_bias": true,
+        "tie_weight": null
+      }
+    },
+    "layer_0_activation": {
+      "name": "layer_0_activation",
+      "type": "activation",
+      "inputs": [
+        "layer_0_fc1_out_12"
+      ],
+      "outputs": [
+        "layer_0_activation_out_13"
+      ],
+      "attributes": {
+        "activation": "relu"
+      }
+    },
+    "layer_0_down_proj": {
+      "name": "layer_0_down_proj",
+      "type": "linear",
+      "inputs": [
+        "layer_0_activation_out_13"
+      ],
+      "outputs": [
+        "layer_0_down_proj_out_14"
+      ],
+      "attributes": {
+        "in_features": 32,
+        "out_features": 16,
+        "use_bias": true,
+        "tie_weight": null
+      }
+    },
+    "layer_0_mlp_residual": {
+      "name": "layer_0_mlp_residual",
+      "type": "add",
+      "inputs": [
+        "layer_0_attn_residual_out_10",
+        "layer_0_down_proj_out_14"
+      ],
+      "outputs": [
+        "layer_0_mlp_residual_out_15"
+      ],
+      "attributes": {}
+    },
+    "output_norm": {
+      "name": "output_norm",
+      "type": "rmsnorm",
+      "inputs": [
+        "layer_0_mlp_residual_out_15"
+      ],
+      "outputs": [
+        "output_norm_out_16"
+      ],
+      "attributes": {
+        "normalized_shape": 16,
+        "eps": 1e-06
+      }
+    },
+    "output_projection": {
+      "name": "output_projection",
+      "type": "linear",
+      "inputs": [
+        "output_norm_out_16"
+      ],
+      "outputs": [
+        "output_projection_out_17"
+      ],
+      "attributes": {
+        "in_features": 16,
+        "out_features": 32,
+        "use_bias": false,
+        "tie_weight": "token_embeddings.weight"
+      }
+    }
+  },
+  "inputs": [
+    "input_ids"
+  ],
+  "outputs": [
+    "output_projection_out_17"
+  ]
+}
